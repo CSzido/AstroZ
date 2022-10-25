@@ -1,0 +1,1 @@
+web: gunicorn Astroz.wsgi --log-file -

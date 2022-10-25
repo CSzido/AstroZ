@@ -1,0 +1,45 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            AstroZ
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="{%static 'css/main.css'%}">
+        <link rel="icon" href="{%static 'imgs/astroz.png'%}" type="image/png">
+
+    </head>
+    <body>
+        <header>
+            <img src="{%static 'imgs/astroz.png'%}">
+        </header>
+        <container>
+        <div class="container">
+            {%for i in products%}
+        <div class="card">
+            <div class="lines"></div>
+                <div class="imageBox">
+                    <img src="{{i.img}}" alt="avatar">
+                </div>
+            <div class="content">
+                <div class="details">
+                    <h2>{{i.title}}<br/> <span>{{i.subtitle}}</span></h2>
+                <div class="info">
+                    <h3>✅<br/><span>{{i.f1}}</span></h3>
+                    <h3>✅<br/><span>{{i.f2}}</span></h3>
+                    <h3>✅<br/><span>{{i.f3}}</span></h3>
+                </div>
+                <div class="actions">
+                    <a href="service/{{i.id}}"><button>Get now 🤓</button></a>
+                    <a href="service/{{i.id}}"><button>Details ✨</button></a>
+                </div>
+                </div>
+            </div>
+        </div>
+            {%endfor%}
+        </div>
+        </container>
+    </body>
+</html>
