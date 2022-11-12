@@ -27,7 +27,7 @@ DEFAULT_CHARSET = 'utf-8'
 SECRET_KEY = 'django-insecure-4em*fz!dvy(!fuy)z%@+zyqu*(ow@g2-ak-k5^n@n96dvwq4%6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
