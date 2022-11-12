@@ -21,19 +21,21 @@
         <div class="card">
             <div class="lines"></div>
                 <div class="imageBox">
-                    <img src="{{i.img}}" alt="avatar">
+                {%if i.img != ""%}
+                    <img src="{{i.img.url}}" alt="avatar" onerror="this.onerror=null; this.src = 'https://static.thenounproject.com/png/1856610-200.png'">
+                {%else%}
+                    <img src="https://static.thenounproject.com/png/1856610-200.png" alt="avatar">
                 </div>
             <div class="content">
                 <div class="details">
                     <h2>{{i.title}}<br/> <span>{{i.subtitle}}</span></h2>
                 <div class="info">
-                    <h3>✅<br/><span>{{i.f1}}</span></h3>
-                    <h3>✅<br/><span>{{i.f2}}</span></h3>
+                    <h3>{{i.f1}}<br/><span>Lines Count</span></h3>
+                    <h3>✅<br/><span></span>{{i.f2}}</h3>
                     <h3>✅<br/><span>{{i.f3}}</span></h3>
                 </div>
                 <div class="actions">
-                    <a href="service/{{i.id}}"><button>Get now 🤓</button></a>
-                    <a href="service/{{i.id}}"><button>Details ✨</button></a>
+                    <a href="https://wa.me/+201101357016"><button>Get now 🤓</button></a>
                 </div>
                 </div>
             </div>
